@@ -8,16 +8,16 @@ else
 fi
 
 sudo apt-get -y update
-sudo apt-get install -y git wget cmake python3-pip unzip clang libpng-dev libgeos-dev
+sudo apt-get install -y git wget cmake unzip clang libpng-dev libgeos-dev
 # Install opencv separately because pip3 install doesn't install all libraries
 # opencv requires.
-sudo apt-get install -y python3-opencv
-python3 -m pip install --user gdown
+# sudo apt-get install -y python3-opencv
+python3 -m pip install gdown
 # Install Pygame if available.
-PYGAME_PKG=`apt-cache search python3-pygame`
-if [ -n "$PYGAME_PKG" ] ; then
-    sudo apt-get install python3-pygame
-fi
+# PYGAME_PKG=`apt-cache search python3-pygame`
+# if [ -n "$PYGAME_PKG" ] ; then
+#     sudo apt-get install python3-pygame
+# fi
 
 ###############################################################################
 # Get models & code bases we depend on
@@ -109,7 +109,8 @@ cd $PYLOT_HOME/dependencies/
 if [ "$1" != 'challenge' ] && [ ! -d "CARLA_0.9.10.1" ]; then
     mkdir CARLA_0.9.10.1
     cd CARLA_0.9.10.1
-    wget https://carla-releases.s3.eu-west-3.amazonaws.com/Linux/CARLA_0.9.10.1.tar.gz
+    wget https://tiny.carla.org/carla-0-9-10-1-linux
+    mv carla-0-9-10-1-linux CARLA_0.9.10.1.tar.gz
     tar -xvf CARLA_0.9.10.1.tar.gz
     rm CARLA_0.9.10.1.tar.gz
 fi
