@@ -12,7 +12,7 @@ sudo apt-get install -y git wget cmake unzip clang libpng-dev libgeos-dev
 # Install opencv separately because pip3 install doesn't install all libraries
 # opencv requires.
 # sudo apt-get install -y python3-opencv
-python3 -m pip install gdown
+# python3 -m pip install gdown
 # Install Pygame if available.
 # PYGAME_PKG=`apt-cache search python3-pygame`
 # if [ -n "$PYGAME_PKG" ] ; then
@@ -25,9 +25,10 @@ python3 -m pip install gdown
 cd $PYLOT_HOME/dependencies/
 
 ###### Download the model weights ######
+pip install gdown
 echo "[x] Downloading all model weights..."
 cd $PYLOT_HOME/dependencies/
-~/.local/bin/gdown https://drive.google.com/uc\?id=1vSOBQTMbGB9OeLE-jYylgnSQekKHK2T3
+gdown https://drive.google.com/uc\?id=1vSOBQTMbGB9OeLE-jYylgnSQekKHK2T3
 unzip models.zip ; rm models.zip
 
 #################### Download the code bases ####################
