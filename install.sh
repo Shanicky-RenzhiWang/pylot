@@ -27,7 +27,7 @@ cd $PYLOT_HOME/dependencies/
 ###### Download the model weights ######
 echo "[x] Downloading all model weights..."
 cd $PYLOT_HOME/dependencies/
-~/.local/bin/gdown https://drive.google.com/uc?id=1rQKFDxGDFi3rBLsMrJzb7oGZvvtwgyiL
+~/.local/bin/gdown https://drive.google.com/uc?id=1vSOBQTMbGB9OeLE-jYylgnSQekKHK2T3
 unzip models.zip ; rm models.zip
 
 #################### Download the code bases ####################
@@ -80,11 +80,11 @@ export LLVM_CONFIG=/usr/bin/llvm-config-9
 python3 setup.py build develop --user
 
 ###### Install QDTrack ######
-cd $PYLOT_HOME/dependencies/
-git clone https://github.com/mageofboy/qdtrack.git
-cd $PYLOT_HOME/dependencies/qdtrack
-python3 -m pip install mmcv==1.3.10 mmdet==2.14.0
-python3 -m pip install -e ./
+#cd $PYLOT_HOME/dependencies/
+#git clone https://github.com/mageofboy/qdtrack.git
+#cd $PYLOT_HOME/dependencies/qdtrack
+#python3 -m pip install mmcv==1.3.10 mmdet==2.14.0
+#python3 -m pip install -e ./
 
 ##### Download the Lanenet code #####
 echo "[x] Cloning the lanenet lane detection code..."
