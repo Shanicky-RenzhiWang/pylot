@@ -27,7 +27,7 @@ cd $PYLOT_HOME/dependencies/
 ###### Download the model weights ######
 echo "[x] Downloading all model weights..."
 cd $PYLOT_HOME/dependencies/
-~/.local/bin/gdown https://drive.google.com/uc?id=1vSOBQTMbGB9OeLE-jYylgnSQekKHK2T3
+~/.local/bin/gdown https://drive.google.com/uc\?id=1vSOBQTMbGB9OeLE-jYylgnSQekKHK2T3
 unzip models.zip ; rm models.zip
 
 #################### Download the code bases ####################
